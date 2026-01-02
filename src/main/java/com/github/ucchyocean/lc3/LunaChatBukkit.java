@@ -25,7 +25,6 @@ import org.bukkit.scheduler.BukkitTask;
 
 import com.github.ucchyocean.lc3.bridge.DynmapBridge;
 import com.github.ucchyocean.lc3.bridge.McMMOBridge;
-import com.github.ucchyocean.lc3.bridge.MultiverseCoreBridge;
 import com.github.ucchyocean.lc3.bridge.VaultChatBridge;
 import com.github.ucchyocean.lc3.bukkit.BukkitEventListener;
 import com.github.ucchyocean.lc3.bukkit.BukkitEventSender;
@@ -50,7 +49,6 @@ public class LunaChatBukkit extends JavaPlugin implements PluginInterface {
 
     private VaultChatBridge vaultchat;
     private DynmapBridge dynmap;
-    private MultiverseCoreBridge multiverse;
 
     private BukkitTask expireCheckerTask;
     private LunaChatLogger normalChatLogger;
@@ -108,12 +106,6 @@ public class LunaChatBukkit extends JavaPlugin implements PluginInterface {
             if ( dynmap != null ) {
                 getServer().getPluginManager().registerEvents(dynmap, this);
             }
-        }
-
-        // MultiverseCore のロード
-        temp = getServer().getPluginManager().getPlugin("Multiverse-Core");
-        if ( temp != null ) {
-            multiverse = MultiverseCoreBridge.load(temp);
         }
 
         // mcMMOのロード
@@ -242,14 +234,6 @@ public class LunaChatBukkit extends JavaPlugin implements PluginInterface {
      */
     public DynmapBridge getDynmap() {
         return dynmap;
-    }
-
-    /**
-     * MultiverseCore連携クラスを返す
-     * @return MultiverseCoreBridge
-     */
-    public MultiverseCoreBridge getMultiverseCore() {
-        return multiverse;
     }
 
     /**

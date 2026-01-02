@@ -216,9 +216,6 @@ public class ChannelMemberPlayer extends ChannelMemberBukkit {
     public String getWorldName() {
         World world = getWorld();
         if ( world == null ) return "";
-        if ( LunaChatBukkit.getInstance().getMultiverseCore() != null ) {
-            return LunaChatBukkit.getInstance().getMultiverseCore().getWorldAlias(world.getName());
-        }
         return world.getName();
     }
 

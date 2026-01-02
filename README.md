@@ -1,7 +1,9 @@
 LunaChat
 ========
 
-Build Status : [![Build Status](https://img.shields.io/github/actions/workflow/status/GiganticMinecraft/LunaChat/build.yaml)](https://travis-ci.org/ucchyocean/LunaChat)
+Forked By m1sk9.
+
+- 最新版に対応するため MutiverseCore の連携機能を削除
 
 チャンネルチャットプラグイン<br />
 <br />
